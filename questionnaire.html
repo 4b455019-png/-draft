@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>李宜潔的作業二 - 問卷表單</title>
+<link rel="icon" href="img/name.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    width:100%;
+    min-width:600px;
+    max-width:960px;
+    margin:0 auto;
+    font-family: "Microsoft JhengHei", "微軟正黑體", Arial, sans-serif;
+    background:#f5f5f5;
+}
+header { width:100%; background:gray; color:white; padding:12px 20px; }
+header h1 { font-size:22px; }
+header p { font-size:14px; margin-top:4px; }
+nav { width:100%; background:black; color:white; padding:10px 20px; }
+nav a { color:white; text-decoration:none; margin-right:18px; }
+nav a:hover { color:#ccc; }
+
+main {
+    width:100%;
+    background:lightgray;
+    padding:25px 30px;
+    min-height:700px;
+}
+
+h2 {
+    font-size:24px;
+    margin-bottom:18px;
+    color:#333;
+    border-bottom:2px solid #666;
+    padding-bottom:8px;
+}
+
+fieldset {
+    border:2px solid #666;
+    border-radius:6px;
+    padding:20px 25px;
+    background:#eaeaea;
+    margin-bottom:25px;
+}
+legend {
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+    padding:0 10px;
+}
+
+.question {
+    margin-bottom:22px;
+    padding-bottom:15px;
+    border-bottom:1px dashed #999;
+}
+.question:last-of-type {
+    border-bottom:none;
+}
+.q-title {
+    font-size:16px;
+    font-weight:bold;
+    color:#222;
+    margin-bottom:6px;
+}
+.q-desc {
+    font-size:13px;
+    color:#555;
+    margin-bottom:10px;
+    line-height:1.5;
+}
+
+label {
+    display:inline-block;
+    margin-right:18px;
+    margin-bottom:6px;
+    cursor:pointer;
+}
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right:5px;
+    transform:scale(1.15);
+}
+
+select {
+    padding:5px 8px;
+    border:1px solid #888;
+    border-radius:4px;
+    background:white;
+    min-width:200px;
+}
+select[multiple] {
+    height:100px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding:6px 10px;
+    border:1px solid #888;
+    border-radius:4px;
+    width:280px;
+    background:white;
+}
+
+textarea {
+    width:100%;
+    max-width:500px;
+    padding:8px;
+    border:1px solid #888;
+    border-radius:4px;
+    resize:vertical;
+    font-family:inherit;
+    background:white;
+}
+
+.btn-area {
+    text-align:center;
+    margin-top:20px;
+}
+button {
+    padding:10px 28px;
+    margin:0 12px;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+}
+button[type="submit"] {
+    background:#555;
+}
+button[type="submit"]:hover {
+    background:#333;
+}
+button[type="reset"] {
+    background:#888;
+}
+button[type="reset"]:hover {
+    background:#666;
+}
+
+footer {
+    width:100%;
+    background:#eaeaea;
+    text-align:center;
+    padding:12px;
+    font-size:14px;
+    clear:both;
+}
+footer a { color:#333; }
+</style>
+</head>
+
+<body>
+<nav>
+    <a href="index.html"><i class="fa fa-globe" aria-hidden="true"></i> 首頁</a>
+    <i class="fa fa-address-book-o" aria-hidden="true"></i> 目錄
+    <a href="album.html"><i class="fa fa-user-circle" aria-hidden="true"></i> 作品集</a>
+    <a href="aboutme.html"><i class="fa fa-superpowers" aria-hidden="true"></i> 關於我</a>
+    <a href="questionnaire.html"><i class="fa fa-question-circle" aria-hidden="true"></i> 問卷表單</a>
+</nav>
+
+<header>
+    <h1><i class="fa fa-ravelry" aria-hidden="true"></i> 颶風娛樂文化有限公司</h1>
+    <p>颶風無限，未來永續</p>
+</header>
+
+<main>
+    <h2><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 問卷調查：愛是否可以通過自由意志控制</h2>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>請填寫以下問卷</legend>
+
+            <!-- 1. 是非題：checkbox -->
+            <div class="question">
+                <p class="q-title">1. 是非題</p>
+                <p class="q-desc">你認為「愛」可以被人的自由意志完全控制嗎？（請勾選同意的選項）</p>
+                <label>
+                    <input type="checkbox" name="q1" value="yes"> 是，愛可以透過意志控制
+                </label>
+                <label>
+                    <input type="checkbox" name="q1" value="no"> 否，愛無法被意志完全控制
+                </label>
+            </div>
+
+            <!-- 2. 單選題：radio -->
+            <div class="question">
+                <p class="q-title">2. 單選題（radio）</p>
+                <p class="q-desc">當你愛上一個人時，你覺得自己最能控制的是哪一部分？</p>
+                <label>
+                    <input type="radio" name="q2" value="emotion"> 情感的產生
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="expression"> 情感的表達方式
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="action"> 是否採取行動追求
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="none"> 幾乎無法控制任何部分
+                </label>
+            </div>
+
+            <!-- 3. 單選題：select -->
+            <div class="question">
+                <p class="q-title">3. 單選題（下拉選單）</p>
+                <p class="q-desc">你認為「自由意志」在愛情中所扮演的角色重要性如何？</p>
+                <select name="q3">
+                    <option value="">-- 請選擇 --</option>
+                    <option value="very">非常重要，幾乎可完全主導</option>
+                    <option value="important">重要，但情感仍會影響</option>
+                    <option value="medium">普通，兩者互相拉扯</option>
+                    <option value="low">不太重要，情感常凌駕意志</option>
+                    <option value="none">幾乎沒有影響力</option>
+                </select>
+            </div>
+
+            <!-- 4. 複選題：checkbox -->
+            <div class="question">
+                <p class="q-title">4. 複選題（checkbox）</p>
+                <p class="q-desc">下列哪些情況，你覺得「意志」比較容易戰勝「情感」？（可複選）</p>
+                <label>
+                    <input type="checkbox" name="q4" value="distance"> 長時間的物理距離
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="value"> 價值觀嚴重不合
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="family"> 家人強烈反對
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="future"> 對未來規劃完全不同
+                </label>
+                <label>
+                    <input type="checkbox" name="q4" value="hurt"> 曾經被嚴重傷害過
+                </label>
+            </div>
+
+            <!-- 5. 複選題：select multiple -->
+            <div class="question">
+                <p class="q-title">5. 複選題（下拉選單，按住 Ctrl 可多選）</p>
+                <p class="q-desc">你認為愛情中最難用自由意志控制的面向有哪些？（可複選）</p>
+                <select name="q5" multiple size="5">
+                    <option value="first">一見鍾情的瞬間</option>
+                    <option value="jealousy">嫉妒與佔有慾</option>
+                    <option value="miss">思念的強度</option>
+                    <option value="pain">失戀後的痛苦</option>
+                    <option value="chemistry">身體與化學吸引</option>
+                </select>
+            </div>
+
+            <!-- 6. 填充題：text -->
+            <div class="question">
+                <p class="q-title">6. 填充題（文字）</p>
+                <p class="q-desc">請用一句話簡單描述你對「愛與自由意志」的看法：</p>
+                <input type="text" name="q6" placeholder="請輸入你的想法…">
+            </div>
+
+            <!-- 7. 填充題：number -->
+            <div class="question">
+                <p class="q-title">7. 填充題（數字）</p>
+                <p class="q-desc">你覺得一個人平均需要幾次「用意志壓抑情感」的經驗，才比較能掌握自己的心？（請填數字）</p>
+                <input type="number" name="q7" min="0" max="100" placeholder="請輸入數字">
+            </div>
+
+            <!-- 8. 填充題：date -->
+            <div class="question">
+                <p class="q-title">8. 填充題（日期）</p>
+                <p class="q-desc">請回想並選擇一個「你曾經用意志成功控制住情感」的重要日期（若無則可略過）：</p>
+                <input type="date" name="q8">
+            </div>
+
+            <!-- 9. 問答題：textarea -->
+            <div class="question">
+                <p class="q-title">9. 問答題</p>
+                <p class="q-desc">請詳細說明你認為「愛是否可以通過自由意志控制」的理由，以及你自己的相關經驗或觀察。（至少三行）</p>
+                <textarea name="q9" rows="5" placeholder="請在此詳細填寫你的想法與經驗…"></textarea>
+            </div>
+
+            <!-- 按鈕區 -->
+            <div class="btn-area">
+                <button type="submit">送出</button>
+                <button type="reset">重設</button>
+            </div>
+        </fieldset>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 娛樂文化有限公司</p>
+    <p><a href="#">Back to top</a></p>
+</footer>
+</body>
+</html>
